@@ -1,0 +1,14 @@
+<div>
+    <input type="text" [(ngModel)]="newTask">
+    <button (click)="onAdd()">Add</button>
+</div>
+
+<div *ngFor="let task of tasks; let i = index">
+
+    <div>
+    <input type="checkbox" [(ngModel)]='task.completed'> 
+        <span [ngClass]="{'completed': task.completed}">{{ task.name }}</span>
+    <input type="button" value="Delete" (click)="onDelete(i)">
+    </div>
+
+</div>
