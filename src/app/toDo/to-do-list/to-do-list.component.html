@@ -1,9 +1,9 @@
-<div>
+<div class="alignment">
     <input type="text" [(ngModel)]="newTask">
     <button (click)="onAdd()">Add</button>
 </div>
 
-<div *ngFor="let task of tasks; let i = index">
+<div class="alignment" *ngFor="let task of tasks; let i = index">
 
     <div>
     <input type="checkbox" [(ngModel)]='task.completed'> 
